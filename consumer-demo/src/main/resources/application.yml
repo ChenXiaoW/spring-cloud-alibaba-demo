@@ -1,0 +1,26 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: consumer-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.106.220.141:8848
+        namespace: 832fb525-e351-485e-b984-78033ae04fda
+#\u5F00\u542Fsentinel\u7194\u65AD\u5668
+feign:
+  sentinel:
+    enabled: true
+
+# \u7AEF\u70B9\u68C0\u67E5
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: debug
