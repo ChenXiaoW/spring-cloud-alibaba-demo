@@ -9,6 +9,14 @@ spring:
       discovery:
         server-addr: 47.106.220.141:8848
         namespace: 832fb525-e351-485e-b984-78033ae04fda
+    sentinel:
+      transport:
+        #sentinel \u670D\u52A1\u5730\u5740
+        dashboard: 127.0.0.1:8080
+        #\u4EA4\u4E92\u7AEF\u53E3
+        port: 8888
+        #\u5173\u95ED\u52A0\u8F7D\u5EF6\u8FDF
+      eager: true
 #\u5F00\u542Fsentinel\u7194\u65AD\u5668
 feign:
   sentinel:
