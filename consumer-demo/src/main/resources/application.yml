@@ -11,58 +11,18 @@ spring:
         namespace: 832fb525-e351-485e-b984-78033ae04fda
     sentinel:
       transport:
-        #sentinel 服务地址
+        #sentinel \u670D\u52A1\u5730\u5740
         dashboard: 127.0.0.1:8080
-        #交互端口号
+        #\u4EA4\u4E92\u7AEF\u53E3
         port: 8888
-        #关闭加载延迟
+        #\u5173\u95ED\u52A0\u8F7D\u5EF6\u8FDF
       eager: true
-      #规则数据源配置
-      datasource:
-        # 限流配置  名称随意
-        flow:
-          nacos:
-            server-addr: ${spring.cloud.nacos.discovery.server-addr}
-            dataId: ${spring.application.name}-flow-rules
-            groupId: SENTINEL_GROUP
-            # 规则类型，取值见：
-            # org.springframework.cloud.alibaba.sentinel.datasource.RuleType
-            rule-type: flow
-        #降级配置
-        degrade:
-          nacos:
-            server-addr: ${spring.cloud.nacos.discovery.server-addr}
-            dataId: ${spring.application.name}-degrade-rules
-            groupId: SENTINEL_GROUP
-            rule-type: degrade
-        #系统配置
-        system:
-          nacos:
-            server-addr: ${spring.cloud.nacos.discovery.server-addr}
-            dataId: ${spring.application.name}-system-rules
-            groupId: SENTINEL_GROUP
-            rule-type: system
-        #授权配置
-        authority:
-          nacos:
-            server-addr: ${spring.cloud.nacos.discovery.server-addr}
-            dataId: ${spring.application.name}-authority-rules
-            groupId: SENTINEL_GROUP
-            rule-type: authority
-        #参数限流配置 - 热点规则
-        param-flow:
-          nacos:
-            server-addr: ${spring.cloud.nacos.discovery.server-addr}
-            dataId: ${spring.application.name}-param-flow-rules
-            groupId: SENTINEL_GROUP
-            rule-type: param-flow
-
-
-#feign 开启 sentinel
+#\u5F00\u542Fsentinel\u7194\u65AD\u5668
 feign:
   sentinel:
     enabled: true
 
+# \u7AEF\u70B9\u68C0\u67E5
 management:
   endpoints:
     web:
