@@ -46,6 +46,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 实现Sentinel 规则远程配置 -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+             <version>1.6.3</version>
+        </dependency>
     </dependencies>
 
     <build>
