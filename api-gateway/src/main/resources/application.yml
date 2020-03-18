@@ -12,7 +12,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: false #开启gateway从nacos获取服务信息
+          enabled: true #开启gateway从nacos获取服务信息
 
       #路由数组
       routes: #路由数组 [路由：当请求满足某个条件的时候转发到指定的微服务上]
@@ -26,19 +26,19 @@ spring:
             - Between=2019-12-31T23:59:59.789+08:00[Asia/Shanghai],2020-12-31T23:59:59.789+08:00[Asia/Shanghai]
         #基于cookies
         - id: cookie_route
-          uri: http://www.baidu.com
+          uri: lb://consumer-demo
           order: 1
           predicates:
             - Cookie=chocolate,value
       #基于请求头
         - id: header_route
-          uri: http://www.baidu.com
+          uri: lb://consumer-demo
           order: 1
           predicates:
             - Header=X-Request-Id, \d+
       #基于参数路由
         - id: param_route
-          uri: http://www.jd.com
+          uri: lb://consumer-demo
           order: 1
           predicates:
             - Query=name,chenwei
