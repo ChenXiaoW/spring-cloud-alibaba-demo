@@ -8,16 +8,17 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>pom.xml</relativePath>
     </parent>
+
     <groupId>cn.cwbolg</groupId>
-    <artifactId>consumer-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>api-gateway</artifactId>
     <packaging>jar</packaging>
 
 
     <dependencies>
+        <!-- gateway 此模块不能引入starter-web -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
         <!-- 心跳检测 -->
         <dependency>
@@ -29,18 +30,12 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!-- feign依赖-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <!-- sentinel 熔断器 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-            <version>0.2.1.RELEASE</version>
-        </dependency>
 
+       <!-- <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
