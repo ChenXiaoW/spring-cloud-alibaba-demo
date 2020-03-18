@@ -1,0 +1,11 @@
+server:
+  port: 8022
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.106.220.141:8848
+        namespace: 832fb525-e351-485e-b984-78033ae04fda
