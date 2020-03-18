@@ -1,4 +1,4 @@
-package cn.cwbolg.consumerdemo.util;
+package cn.cwbolg.consumerdemo.config;
 
 import com.alibaba.csp.sentinel.adapter.servlet.callback.RequestOriginParser;
 import org.springframework.stereotype.Component;
