@@ -51,4 +51,15 @@ spring:
             - After=2019-12-31T23:59:59.789+08:00[Asia/Shanghai]
           filters: #过滤器 （在请求传递过程中对其做一些处理）
             - StripPrefix=1 #在请求转发之前去掉一层路径
+        #自定义路由
+        - id: route_demo
+          uri: http://www.baidu.com
+          order: 1
+          predicates:
+            - Age=12,20
 
+        - id: route_demo2
+          uri: http://www.baidu.com
+          order: 1
+          predicates:
+            - Token=123
