@@ -63,3 +63,5 @@ spring:
           order: 1
           predicates:
             - Token=123
+          filters:
+            - Log=true,false

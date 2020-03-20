@@ -1,4 +1,4 @@
-package cn.cwbolg.apigateway.config;
+package cn.cwbolg.apigateway.routepredicatefactory;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,7 @@ import java.util.function.Predicate;
  * @date  2020/3/19 10:09
  *
  * 自定义路由断言工厂
- * 1、名字必须是配置+RoutePredicateFactory
+ * 1、名字必须是配置+routepredicatefactory
  * 2、必须继承AbstractRoutePredicateFactory<配置类>
  */
 @Component

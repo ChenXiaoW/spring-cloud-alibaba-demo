@@ -1,10 +1,9 @@
-package cn.cwbolg.apigateway.config;
+package cn.cwbolg.apigateway.routepredicatefactory;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.cloud.gateway.handler.predicate.AbstractRoutePredicateFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.server.ServerWebExchange;
 
