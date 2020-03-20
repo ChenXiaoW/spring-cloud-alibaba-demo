@@ -1,4 +1,4 @@
-package cn.cwbolg.apigateway.filter;
+package cn.cwbolg.apigateway.gatewayfilterfactory;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
