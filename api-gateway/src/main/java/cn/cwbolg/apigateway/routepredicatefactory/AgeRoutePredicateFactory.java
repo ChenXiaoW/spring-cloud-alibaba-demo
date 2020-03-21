@@ -19,7 +19,7 @@ import java.util.function.Predicate;
  * 1、名字必须是配置+routepredicatefactory
  * 2、必须继承AbstractRoutePredicateFactory<配置类>
  */
-@Component
+//@Component
 public class AgeRoutePredicateFactory extends AbstractRoutePredicateFactory<AgeRoutePredicateFactory.Config> {
 
     public AgeRoutePredicateFactory() {

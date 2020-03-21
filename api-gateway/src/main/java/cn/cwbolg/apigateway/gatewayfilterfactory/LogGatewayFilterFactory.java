@@ -18,7 +18,7 @@ import java.util.List;
  *
  * 自定义局部过滤器
  */
-@Component
+//@Component
 public class LogGatewayFilterFactory extends AbstractGatewayFilterFactory<LogGatewayFilterFactory.Config> {
 
 
