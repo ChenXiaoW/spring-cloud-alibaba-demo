@@ -17,7 +17,7 @@ import java.util.function.Predicate;
  *
  * 自定义路由
  */
-@Component
+//@Component
 public class TokenRoutePredicateFactory extends AbstractRoutePredicateFactory<TokenRoutePredicateFactory.Config> {
 
     public TokenRoutePredicateFactory(){

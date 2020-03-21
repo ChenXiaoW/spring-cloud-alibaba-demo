@@ -17,7 +17,7 @@ import reactor.core.publisher.Mono;
  * @create: 2020/3/19 - 18:55
  **/
 
-@Component
+//@Component
 @Slf4j
 public class AuthGlobalFilter implements GlobalFilter, Ordered {
 	/**
