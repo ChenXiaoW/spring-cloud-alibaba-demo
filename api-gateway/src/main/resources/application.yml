@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: api-gateway
+  zipkin:
+    base-url: http://127.0.0.1:9411 #zipkin server 的地址
+    discovery-client-enabled: false #让nacos 把它当做一个url，而不是一个服务名
+  sleuth:
+    sampler:
+      probability: 1.0 #采样百分比  0.0-1.0
   cloud:
     nacos:
       discovery:
