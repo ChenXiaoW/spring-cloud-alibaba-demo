@@ -70,8 +70,8 @@ public class ApiGatewayConfiguration {
 	@PostConstruct
 	public void initGatewayRules(){
 		Set<GatewayFlowRule> rules = new HashSet<>(2);
-		rules.add(new GatewayFlowRule(cousumerApi1).setCount(1).setIntervalSec(1));
-		rules.add(new GatewayFlowRule(cousumerApi2).setCount(2).setIntervalSec(1));
+		rules.add(new GatewayFlowRule(cousumerApi1).setCount(2).setIntervalSec(1));
+		rules.add(new GatewayFlowRule(cousumerApi2).setCount(3).setIntervalSec(1));
 		GatewayRuleManager.loadRules(rules);
 	}
 
