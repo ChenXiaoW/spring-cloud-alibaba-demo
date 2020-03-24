@@ -5,7 +5,7 @@ spring:
   application:
     name: consumer-demo
   zipkin:
-    base-url: http://127.0.0.1:9411 #zipkin server 的地址
+    base-url: http://192.168.37.130:9411 #zipkin server 的地址
     discovery-client-enabled: false #让nacos 把它当做一个url，而不是一个服务名
   sleuth:
     sampler:
