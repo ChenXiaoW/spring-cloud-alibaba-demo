@@ -5,7 +5,7 @@ spring:
     name: provider-demo
     # nacos \u670D\u52A1\u5730\u5740
   zipkin:
-    base-url: http://127.0.0.1:9411 #zipkin server 的地址
+    base-url: http://192.168.37.130:9411 #zipkin server 的地址
     discovery-client-enabled: false #让nacos 把它当做一个url，而不是一个服务名
   sleuth:
     sampler:
@@ -26,3 +26,8 @@ management:
 logging:
   level:
     root: info
+#rocketmq
+rocketmq:
+  name-server: 192.168.37.130:9876
+  producer:
+    group: myGroup
