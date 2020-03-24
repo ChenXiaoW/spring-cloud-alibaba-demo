@@ -79,7 +79,7 @@ public class SenderTest {
 			SendResult sendResult = rocketMQTemplate.syncSendOrderly("myTopic", "同步顺序消息", "xxx",10000);
 		}
 		//异步顺序消息
-	/*	rocketMQTemplate.asyncSendOrderly("myTopic", "异步顺序消息", "xxx", new SendCallback() {
+	/*	rocketMQTemplate.asyncSendOrderly("myTopic", "异步顺序消息", "xxx", new  SendCallback() {
 			@Override
 			public void onSuccess(SendResult sendResult) {
 
