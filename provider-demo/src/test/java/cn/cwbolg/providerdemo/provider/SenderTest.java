@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.UUID;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SenderTest {
@@ -64,7 +66,32 @@ public class SenderTest {
 	 */
 	@Test
 	public void test3(){
-		rocketMQTemplate.sendOneWay("test_topic_3", "这是一条单向消息");
+		for (int i=0 ; i<15;i++){
+			rocketMQTemplate.sendOneWay("myTopic", "这是一条单向消息=="+i);
+		}
+	}
+
+	@Test
+	public void test4(){
+		//同步顺序消息
+		//第三个参数用于队列选择，唯一
+		for (int i = 0; i <5 ; i++) {
+			SendResult sendResult = rocketMQTemplate.syncSendOrderly("myTopic", "同步顺序消息", "xxx",10000);
+		}
+		//异步顺序消息
+	/*	rocketMQTemplate.asyncSendOrderly("myTopic", "异步顺序消息", "xxx", new SendCallback() {
+			@Override
+			public void onSuccess(SendResult sendResult) {
+
+			}
+
+			@Override
+			public void onException(Throwable throwable) {
+
+			}
+		});
+		//单向顺序消息
+		rocketMQTemplate.sendOneWayOrderly("myTopic", "单向顺序消息", "xxx");*/
 	}
 
 }
