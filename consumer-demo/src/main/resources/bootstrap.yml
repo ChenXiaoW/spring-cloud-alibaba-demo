@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: consumer-demo
+  cloud:
+    nacos:
+      config:
+        server-addr: 47.106.220.141:8848
+        namespace: c29858e0-26d6-4cc5-b060-75089a6a19b4 #命名空间
+        ext-config:
+          - data-id: consumer-demo-dev.yaml
+            refresh: true #动态刷新
+            group: alibaba-demo2
