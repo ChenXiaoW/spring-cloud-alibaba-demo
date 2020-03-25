@@ -16,6 +16,7 @@
         <module>provider-demo</module>
         <module>consumer-demo</module>
         <module>api-gateway</module>
+        <module>sms-server</module>
     </modules>
 
     <parent>

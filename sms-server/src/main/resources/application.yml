@@ -1,0 +1,14 @@
+server:
+  port: 8023
+
+spring:
+  application:
+    name: sms-server
+
+#阿里云短信服务配置
+aliyun-sms:
+  regionId: cn-hangzhou
+  accessKeyId: xxxx
+  secret: xxxxxx
+  templateCode: SMS_186618137
+  signName: Cw博客登陆验证
