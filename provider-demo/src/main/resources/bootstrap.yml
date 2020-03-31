@@ -10,3 +10,5 @@ spring:
           - data-id: provider-demo-dev.yaml
             refresh: true #动态刷新
             group: alibaba-demo2
+          - data-id: seata
+            refresh: true
